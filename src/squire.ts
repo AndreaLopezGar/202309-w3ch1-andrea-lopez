@@ -1,20 +1,25 @@
-export class Squire extends Characters {
-  phrasePersonal: string = 'Primero pego y luego pregunto';
+import { Character } from './character';
+
+export class Squire extends Character {
+  patron: string;
+  personalQuote: string = 'Soy un loser';
+  servilityGrade: number;
 
   constructor(
     name: string,
     family: string,
     age: number,
-    status: boolean,
-    years: number,
-    skill: number,
-    weapon: string
+    servilityGrade: number
   ) {
-    super(name, family, age, status);
+    super(name, family, age);
     this.patron = 'Fighter';
-    this.servitilityGrade = servitilityGrade;
-    this.servitilityGrade = Math.trunc(Math.random() * 11);
+    this.servilityGrade = servilityGrade;
   }
+
+  phrase() {
+    return super.phrase(this.personalQuote);
+  }
+}
 
   phrase() {
     return super.phrase(this.phrasePersonal);

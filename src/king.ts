@@ -1,21 +1,15 @@
-import { Character } from './characters';
+import { Character } from './character';
 
-export class King extends Characters {
+export class King extends Character {
   years: number;
-  phrasePersonal: string = '';
+  personalQuote: string = 'Vais a morir todos';
 
-  constructor(
-    name: string,
-    family: string,
-    age: number,
-    status: boolean,
-    years: number
-  ) {
-    super(name, family, age, status);
+  constructor(name: string, family: string, age: number, years: number) {
+    super(name, family, age);
     this.years = years;
   }
 
   phrase() {
-    return super.phrase('Vais a morir todos');
+    return super.phrase(this.personalQuote);
   }
 }

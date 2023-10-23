@@ -1,20 +1,11 @@
-export class Characters {
-  name: string;
-  family: string;
-  age: number;
-  status: boolean = true;
+import { King } from './king';
+import { Fighter } from './fighter';
+import { Squire } from './squire';
+import { Advisor } from './advisor';
 
-  // eslint-disable-next-line no-unused-vars
-  constructor(name: string, family: string, age: number, status: boolean) {
-    this.name = name;
-    this.family = family;
-  }
+const joffrey = new King('Joffrey', 'Baratheon', 16, 2);
+const daenerys = new Fighter('Daenerys', 'Targaryen', 30, 'Dragones', 10);
+const bronn = new Squire('Bronn', 'AguasNegras', 54, 0);
+const tyrion = new Advisor('Tyrion', 'Lannister', 40, 'Daenerys');
 
-  phrase(value: string) {
-    return value;
-  }
-
-  dead(status: boolean) {
-    this.status = false;
-  }
-}
+export const characters = [joffrey, daenerys, bronn, tyrion];

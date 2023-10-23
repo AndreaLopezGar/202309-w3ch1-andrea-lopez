@@ -1,21 +1,20 @@
-import { stringify } from 'querystring';
-import { Characters } from './characters';
+import { Character } from './character';
 
-export class Fighter extends Characters {
+export class Fighter extends Character {
+  skill: number;
+  weapon: string;
   phrasePersonal: string = 'Primero pego y luego pregunto';
 
   constructor(
     name: string,
     family: string,
     age: number,
-    status: boolean,
-    years: number,
-    skill: number,
-    weapon: string
+    weapon: string,
+    skill: number
   ) {
-    super(name, family, age, status);
-    this.skill = skill;
+    super(name, family, age);
     this.weapon = weapon;
+    this.skill = skill;
   }
 
   phrase() {
