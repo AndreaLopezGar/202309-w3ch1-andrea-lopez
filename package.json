@@ -14,7 +14,7 @@
     "sass": "sass scss:css -w --no-source-map"
   },
   "keywords": [],
-  "author": "Andrea López ",
+  "author": "Andrea López",
   "license": "ISC",
   "prettier": {
     "singleQuote": true
