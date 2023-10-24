@@ -1,12 +1,13 @@
-import { Character } from './character';
+import { Character } from './character.js';
 
 export class Advisor extends Character {
-  advisor: string;
+  advisorBoss: Character;
   personalQuote: string = 'No sé por qué, pero creo que voy a morir pronto';
 
   constructor(name: string, family: string, age: number, advise: string) {
     super(name, family, age);
-    this.advisor = advise;
+    this.advisorBoss = advisorBoss;
+    this.category = 'Advisor';
   }
 
   phrase() {
