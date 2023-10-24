@@ -1,5 +1,5 @@
 import './scss/main.scss';
-import { characters } from './characters';
+import { characters } from './characters.js';
 
 const appElement = document.querySelector<HTMLDivElement>('#app');
 
